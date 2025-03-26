@@ -1,5 +1,9 @@
 # Async Dual Rate Limiter
 
+[![PyPI](https://img.shields.io/pypi/v/async-limiter)](https://pypi.org/project/async-limiter/)
+[![Python](https://img.shields.io/badge/python-3.9%20%7C%203.10%20%7C%203.11-blue)](https://pypi.org/project/async-limiter/)
+[![License](https://img.shields.io/github/license/Shehryar718/async-limiter)](https://github.com/Shehryar718/async-limiter/blob/main/LICENSE)
+
 A production-ready asyncio-based rate limiter for Python that enforces both concurrent and time-based rate limits.
 
 ## Features
@@ -169,9 +173,21 @@ pytest --cov=async_limiter
 This project uses modern Python packaging with `pyproject.toml`. The development tools configured include:
 
 - **pytest**: For running tests
-- **black**: For code formatting (line length 88)
-- **isort**: For import sorting (configured to be compatible with black)
+- **ruff**: For code formatting and linting
+- **mypy**: For type checking
 - **coverage**: For measuring test coverage
+
+## Why Use Async Dual Rate Limiter?
+
+Many APIs impose both concurrent and time-based rate limits. This package provides a clean, 
+efficient solution to handle both types of limits with minimal overhead and maximum flexibility.
+
+Key advantages:
+- **Production Ready**: Thoroughly tested with extensive error handling
+- **Flexible API**: Use as a context manager, decorator, or with explicit calls
+- **Detailed Metrics**: Track usage and performance with built-in metrics
+- **Type Annotated**: Full type annotations make integration easier
+- **Pure Python**: No external dependencies required
 
 ## License
 
