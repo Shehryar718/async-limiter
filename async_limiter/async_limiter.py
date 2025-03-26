@@ -14,10 +14,10 @@ class DualRateLimiter:
     1. Maximum concurrent requests at any given time
     2. Maximum number of requests within a time period
 
-    This is useful for APIs like OpenAI that have both types of rate limits.
+    This is useful for APIs that have both types of rate limits.
     """
 
-    def __init__(self, max_concurrent: int, max_requests: int, time_period: float):
+    def __init__(self, max_concurrent: int, max_requests: int, time_period: float, conservative: bool = True):
         """
         Initialize the rate limiter.
 
@@ -32,8 +32,7 @@ class DualRateLimiter:
 
         # Make the rate limit more conservative to avoid edge cases
         # For example, if API allows 5 requests per minute, we'll allow 4
-        # self._effective_max_requests = max(1, max_requests - 1)
-        self._effective_max_requests = max_requests
+        self._effective_max_requests = max_requests if not conservative else max(1, max_requests - 1)   
 
         # Semaphore to limit concurrent requests
         self.semaphore = asyncio.Semaphore(max_concurrent)
