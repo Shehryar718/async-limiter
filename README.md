@@ -2,7 +2,7 @@
 
 [![PyPI](https://img.shields.io/pypi/v/async-limiter)](https://pypi.org/project/async-limiter/)
 [![Python](https://img.shields.io/badge/python-3.9%20%7C%203.10%20%7C%203.11-blue)](https://pypi.org/project/async-limiter/)
-[![License](https://img.shields.io/github/license/Shehryar718/async-limiter)](https://github.com/Shehryar718/async-limiter/blob/main/LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-blue)](https://github.com/Shehryar718/async-limiter/blob/main/LICENSE)
 
 A production-ready asyncio-based rate limiter for Python that enforces both concurrent and time-based rate limits.
 
