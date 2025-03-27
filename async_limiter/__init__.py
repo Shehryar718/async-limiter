@@ -7,5 +7,5 @@ both concurrent and time-based rate limits.
 
 from .async_limiter import DualRateLimiter
 
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 __all__ = ["DualRateLimiter"]
